@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Game scheme
 
-Things you may want to cover:
+# model Game belons_to :word
 
-* Ruby version
+            games
+------------------------------
+id       |  guesses  |  word_id
+------------------------------
+bigint   |  array    |  bigint
+------------------------------
+1        |  [К, Ш]   |  1
 
-* System dependencies
+# model Word has_many :games
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+            words
+---------------------
+id       |  text
+---------------------
+bigint   |  string
+---------------------
+1        |  РУБИ
